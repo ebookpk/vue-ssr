@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "dev": "node server/index.js IS_HOTUPDATE=1 IS_SAVE2DISK=0 DEV_METHOD=2",
+    "serve": "vue-cli-service serve",
     "build:client": "vue-cli-service build",
     "build:server": "cross-env WEBPACK_TARGET=node vue-cli-service build --mode server",
     "build": "npm run build:server && npm run build:client"
@@ -16,6 +18,8 @@
     "vue-router": "^3.1.5",
     "vue-server-renderer": "^2.6.11",
     "vuex": "^3.1.2",
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-hot-middleware": "^2.25.0",
     "webpack-node-externals": "^1.7.2"
   },
   "devDependencies": {
